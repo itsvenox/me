@@ -1,7 +1,8 @@
 :root {
     --default-font-family: monospace;
 
-    --page-background-color: #191c25;
+    --page-background-color: #121419;
+    /* --page-background-color: #191c25; */
     --page-background-gradient: radial-gradient(50% 50% at 50% 50%, #20242F 0%, #191C25 100%); /* bookie helped me with this gradient */
     --default-text-color: #d48341;
     --default-text-glow-color: #e39f68;
@@ -12,13 +13,213 @@
     --wordart-header-text-glow-radius: 0.25rem;
 }
 
-@media only screen and (max-width: 350px) {
+/* Common styles for different screen sizes */
+@media only screen and (min-width: 768px) {
+    html { 
+        font-size: 16px; 
+        overflow-x: hidden;
+    }
+
+    .title-page, .wordart-header, .active-section {
+        font-size: 2.2rem;
+    }
+
+    .link-list a { 
+        font-size: 1rem;
+        margin-bottom: 0px; 
+    }
+
+    #main-navbar { 
+        font-size: 17.5px; 
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    html { 
+        font-size: 17px; 
+        overflow-x: auto;
+    }
+
+    .wordart-header, .active-section {
+        font-size: 1.6rem;
+    }
+
+    .home-title {
+        font-size: 1.2rem;
+    }
+
+    .title-page {
+        font-size: 1rem;
+    }
+
+    .link-list a { 
+        font-size: 1.2rem;
+        margin-bottom: 1rem; 
+    }
+
+
+    #mini-navbar-root { display: none; }
+    #mini-navbar-command { display: none; }
+    #full-navbar-root { display: inline; }
+    #full-navbar-command { display: inline; }
+    #main-navbar { font-size: 17.5px; }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    html { 
+        font-size: 15px; 
+        overflow-x: auto;
+    }
+
+    .wordart-header, .active-section {
+        font-size: 1.5rem;
+    }
+
+    .home-title {
+        font-size: 1.2rem;
+    }
+
+    .title-page {
+        font-size: 0.8rem;
+    }
+
+    .link-list a { 
+        font-size: 1.2rem;
+        margin-bottom: 1rem; 
+    }
+
+    #mini-navbar-root { display: none; }
+    #mini-navbar-command { display: none; }
+    #full-navbar-root { display: inline; }
+    #full-navbar-command { display: inline; }
+    #main-navbar { font-size: 17.5px; }
+}
+
+
+@media only screen and (max-width: 600px) {
+    html { 
+        font-size: 13px; 
+        overflow-x: auto;
+    }
+
+    .wordart-header, .active-section {
+        font-size: 1.5rem;
+    }
+
+    .home-title {
+        font-size: 1.2rem;
+    }
+
+    .title-page {
+        font-size: 0.65rem;
+    }
+
+    .link-list a { 
+        font-size: 1.2rem;
+        margin-bottom: 1rem; 
+    }
+
+    #mini-navbar-root { display: none; }
+    #mini-navbar-command { display: none; }
+    #full-navbar-root { display: inline; }
+    #full-navbar-command { display: inline; }
+    #main-navbar { font-size: 17.5px; }
+}
+
+/* Common styles for smaller screens */
+@media only screen and (max-width: 450px) {
+    html { 
+        font-size: 10px; 
+        overflow-x: auto;
+    }
+
+    .wordart-header, .active-section {
+        font-size: 1.7rem;
+    }
+
+    .home-title {
+        font-size: 1.2rem;
+    }
+
+    .title-page {
+        font-size: 1rem;
+    }
+
+    .link-list a { 
+        font-size: 1.5rem;
+        margin-bottom: 1rem; 
+    }
+
+    #mini-navbar-root { display: none; }
+    #mini-navbar-command { display: none; }
+    #full-navbar-root { display: inline; }
+    #full-navbar-command { display: inline; }
+    #main-navbar { font-size: 17.5px; }
+}
+
+
+
+
+
+/* @media only screen and (max-width: 767px) {
+    #mini-navbar-root { display: inline; }
+    #mini-navbar-command { display: inline; }
+    #full-navbar-root { display:none; }
+    #full-navbar-command { display: none; }
+}
+
+@media only screen and (min-width: 768px) {
+    html { font-size: 16px; }
+    .link-list a { 
+        font-size: 1rem; 
+        margin-bottom: 0px;
+    }
+    #mini-navbar-root { display: none; }
+    #mini-navbar-command { display: none; }
+    #full-navbar-root { display: inline; }
+    #full-navbar-command { display: inline; }
+    #main-navbar { font-size: 17.5px; }
+} */
+
+
+
+/* Common styles for different screens */
+/* ... (Additional media queries if necessary) */
+
+/* Footer styles using Flexbox */
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    width: 100vw;
+    text-align: center;
+}
+
+/* Animation definition */
+@keyframes blink-white {
+    50% { color: #ffffff; }
+}
+
+
+
+
+
+
+
+
+/* ################################################################################ */
+/* @media only screen and (max-width: 350px) {
     html { 
         font-size: 6px; 
         overflow-x: auto;
     }
-    .wordart-header { font-size: 10px;}
-    .active-section { font-size: 40px; }
+    .title-page {
+        font-size: 5px;
+    }
+    .wordart-header { font-size: 2.2rem;}
+    .active-section { font-size: 1.7rem; }
     .link-list a { 
         font-size: 1.5rem;
         margin-bottom: 1rem; 
@@ -31,8 +232,11 @@
         font-size: 8px; 
         overflow-x: hidden;
     }
-    .wordart-header { font-size: 10px;}
-    .active-section { font-size: 40px; }
+    .title-page {
+        font-size: 6px;
+    }
+    .wordart-header { font-size: 2.2rem;}
+    .active-section { font-size: 1.7rem; }
     .link-list a { 
         font-size: 1.5rem;
         margin-bottom: 1rem; 
@@ -42,12 +246,18 @@
 
 @media only screen and (min-width: 380px) {
     html { font-size: 10px; }
-    .wordart-header { font-size: 10px; }
+    .title-page {
+        font-size: 5px;
+    }
+    .wordart-header { font-size: 1.5rem; }
     .active-section {  font-size: 1rem; }
 }
 
 @media only screen and (min-width: 400px) {
     html { font-size: 10px; }
+    .title-page {
+        font-size: 5px;
+    }
 }
 
 @media only screen and (min-width: 600px) { 
@@ -76,8 +286,14 @@
 
 @media only screen and (min-width: 992px) {
     html { font-size: 20px; }
-}
+    .title-page {
+        font-size: 15px;
+    }
+} */
 
+
+
+/* ####################################################################################### */
 html { 
     scroll-behavior: smooth;
 }
@@ -242,5 +458,6 @@ a.github-link {
     text-shadow: 0px 0px var(--default-text-glow-radius) #ffffff;
     text-align: left;
 }
+
 
 
