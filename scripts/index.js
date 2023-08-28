@@ -3,7 +3,7 @@ document.querySelectorAll('#page-content > section').forEach(node => {
 })
 
 
-var typewriter = (element, text, finishedCallback, speed=120) => {
+var typewriter = (element, text, finishedCallback, speed=90) => {
     const textArray = text.split('')
     let index = 0
 
