@@ -42,10 +42,10 @@ const updateNavbarContent = () => {
     if (hashAndLinkedLinks[window.location.hash]) {
         if(window.location.hash !== '#home') hashAndLinkedLinks[window.location.hash].classList.add('active-link')
         document.getElementById('current-location').innerText = window.location.hash.substring(1)
-        document.title = `zave | ${window.location.hash.substring(1)}`
+        document.title = `Venox | ${window.location.hash.substring(1)}`
     } else {
         document.getElementById('current-location').innerText = '404'
-        document.title = `zave | ${404}`
+        document.title = `Venox | ${404}`
     }
     typeNavbar()
 }
