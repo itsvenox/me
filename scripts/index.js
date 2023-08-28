@@ -3,7 +3,7 @@ document.querySelectorAll('#page-content > section').forEach(node => {
 })
 
 
-var typewriter = (element, text, finishedCallback, speed=140) => {
+var typewriter = (element, text, finishedCallback, speed=120) => {
     const textArray = text.split('')
     let index = 0
 
@@ -66,4 +66,3 @@ window.addEventListener('load', () => {
     typeWriterAll()
     document.getElementById('footer-year').textContent = new Date().getFullYear()
 })
-
