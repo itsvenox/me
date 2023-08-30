@@ -66,3 +66,43 @@ window.addEventListener('load', () => {
     typeWriterAll()
     document.getElementById('footer-year').textContent = new Date().getFullYear()
 })
+
+
+
+// Define an array of project objects with GitHub repository links and Discord image links
+const projects = [
+    {
+        repoLink: "https://github.com/itsvenox/GevoxAPI",
+        discordImageLink: "https://images.openai.com/blob/373bf52a-5373-4d4e-88fe-7fbf738ec6d1/improving-mathematical-reasoning-with-process-supervision.jpg?trim=0,0,0,0&width=2600"
+    },
+    {
+        repoLink: "https://github.com/itsvenox/GevoxAPI",
+        discordImageLink: "https://images.openai.com/blob/373bf52a-5373-4d4e-88fe-7fbf738ec6d1/improving-mathematical-reasoning-with-process-supervision.jpg?trim=0,0,0,0&width=2600"
+    },
+    // Add more project objects as needed
+];
+
+// Function to create project cards and add them to the container
+function createProjectCards() {
+    const projectContainer = document.getElementById("project-container");
+
+    projects.forEach(project => {
+        const card = document.createElement("div");
+        card.className = "project-card";
+
+        const image = document.createElement("img");
+        image.src = project.discordImageLink;
+        image.alt = "Project Image";
+
+        const repoLink = document.createElement("a");
+        repoLink.href = project.repoLink;
+        repoLink.textContent = "GitHub Repository";
+
+        card.appendChild(image);
+        card.appendChild(repoLink);
+        projectContainer.appendChild(card);
+    });
+}
+
+// Call the function to create and populate project cards
+createProjectCards();
