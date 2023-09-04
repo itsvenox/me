@@ -73,16 +73,21 @@ window.addEventListener('load', () => {
 const projects = [
     {
         repoLink: "https://github.com/itsvenox/GevoxAPI",
-        discordImageLink: "https://images.openai.com/blob/373bf52a-5373-4d4e-88fe-7fbf738ec6d1/improving-mathematical-reasoning-with-process-supervision.jpg?trim=0,0,0,0&width=2600"
+        discordImageLink: "https://media.discordapp.net/attachments/990639796646977556/1145326528960401408/PicsArt_23-08-27_13-55-13-914.png?width=935&height=935"
     },
     {
         repoLink: "https://github.com/itsvenox/GevoxAPI",
-        discordImageLink: "https://images.openai.com/blob/373bf52a-5373-4d4e-88fe-7fbf738ec6d1/improving-mathematical-reasoning-with-process-supervision.jpg?trim=0,0,0,0&width=2600"
+        discordImageLink: "https://media.discordapp.net/attachments/990639796646977556/1145326528960401408/PicsArt_23-08-27_13-55-13-914.png?width=935&height=935"
     },
     // Add more project objects as needed
 ];
 
 // Function to create project cards and add them to the container
+function extractRepoName(repoLink) {
+    const parts = repoLink.split("/");
+    return parts[parts.length - 1];
+}
+
 function createProjectCards() {
     const projectContainer = document.getElementById("project-container");
 
@@ -96,7 +101,7 @@ function createProjectCards() {
 
         const repoLink = document.createElement("a");
         repoLink.href = project.repoLink;
-        repoLink.textContent = "GitHub Repository";
+        repoLink.textContent = extractRepoName(project.repoLink); // Extracted repository name
 
         card.appendChild(image);
         card.appendChild(repoLink);
@@ -106,3 +111,4 @@ function createProjectCards() {
 
 // Call the function to create and populate project cards
 createProjectCards();
+
