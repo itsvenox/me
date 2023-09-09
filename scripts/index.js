@@ -3,7 +3,7 @@ document.querySelectorAll('#page-content > section').forEach(node => {
 })
 
 
-var typewriter = (element, text, finishedCallback, speed=90) => {
+var typewriter = (element, text, finishedCallback, speed = 90) => {
     const textArray = text.split('')
     let index = 0
 
@@ -11,13 +11,13 @@ var typewriter = (element, text, finishedCallback, speed=90) => {
     var typewriterInterval = window.setInterval(() => {
         if (textArray[index]) element.textContent += textArray[index] // weird bug where it infinitely prints undefined, seems like the if loop is being skipped somehow?
 
-        if (index === textArray.length) { 
+        if (index === textArray.length) {
             clearInterval(typewriterInterval)
             finishedCallback()
         }
 
         index++
-    }, speed)  
+    }, speed)
 }
 
 const typeWriterAll = () => {
@@ -57,7 +57,7 @@ const updatePageContent = () => {
 }
 
 window.addEventListener('hashchange', () => {
-    updatePageContent() 
+    updatePageContent()
     typeWriterAll()
 })
 
@@ -69,20 +69,13 @@ window.addEventListener('load', () => {
 
 
 
-// Define an array of project objects with GitHub repository links and Discord image links
 const projects = [
     {
         repoLink: "https://github.com/itsvenox/GevoxAPI",
-        discordImageLink: "https://media.discordapp.net/attachments/990639796646977556/1145326528960401408/PicsArt_23-08-27_13-55-13-914.png?width=935&height=935"
+        discordImageLink: "https://cdn.discordapp.com/attachments/990639796646977556/1150092458940698624/GevoxApi_v1.0.png"
     },
-    {
-        repoLink: "https://github.com/itsvenox/GevoxAPI",
-        discordImageLink: "https://media.discordapp.net/attachments/990639796646977556/1145326528960401408/PicsArt_23-08-27_13-55-13-914.png?width=935&height=935"
-    },
-    // Add more project objects as needed
 ];
 
-// Function to create project cards and add them to the container
 function extractRepoName(repoLink) {
     const parts = repoLink.split("/");
     return parts[parts.length - 1];
@@ -94,21 +87,25 @@ function createProjectCards() {
     projects.forEach(project => {
         const card = document.createElement("div");
         card.className = "project-card";
+        card.href = project.repoLink;
 
         const image = document.createElement("img");
+        image.className = "repo-image";
         image.src = project.discordImageLink;
         image.alt = "Project Image";
 
         const repoLink = document.createElement("a");
-        repoLink.href = project.repoLink;
-        repoLink.textContent = extractRepoName(project.repoLink); // Extracted repository name
+        repoLink.className = "repo-title";
+        repoLink.textContent = extractRepoName(project.repoLink);
 
         card.appendChild(image);
         card.appendChild(repoLink);
         projectContainer.appendChild(card);
+        image.addEventListener('click', () => {
+            const websiteURL = project.repoLink;
+            window.open(websiteURL, '_blank');
+        });
     });
 }
 
-// Call the function to create and populate project cards
 createProjectCards();
-

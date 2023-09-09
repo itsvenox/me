@@ -248,21 +248,57 @@ a.github-link {
     max-width: 100%; /* Set maximum width to make cards span full width */
 }
 
+.repo-title {
+    color:#fff !important ;
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+
 .project-card {
-    flex: 0 1 calc(33.33% - 20px); /* Distribute cards equally in three columns */
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #413d3d79;
+    /* flex: 0 1 calc(20% - 20px); Distribute cards in four columns and reduce card size */
+    margin: 20px;
+    border-radius: 29px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.33);
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 250px;
+    max-width: 100%; /* Set maximum width to make cards span full width */
+    position: relative; /* Add this to position the title over the image */
+    height: 200px;
+    width: 200px;
 }
 
+
 .project-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    width: 100%; /* Make the image span the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 29px;
+    transition: opacity 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.project-card:hover img {
+    opacity: 0.8; /* Reduce opacity of the image on hover */
+}
+
+/* Add title styles */
+.project-card .repo-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.522); /* Semi-transparent background for readability */
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 29px;
+    border-bottom-right-radius: 29px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Add transition for fading effect */
+    font-size: 20px;
+}
+
+.project-card .repo-title {
+    opacity: 1; /* Show title on hover */
 }
