@@ -17,6 +17,7 @@
         font-size: 6px; 
         overflow-x: auto;
     }
+    .projects { font-size: 8px}
     .wordart-header { font-size: 2.2rem;}
     .active-section { font-size: 1.7rem; }
     .link-list a { 
@@ -31,6 +32,7 @@
         font-size: 8px; 
         overflow-x: hidden;
     }
+    .projects { font-size: 8px}
     .wordart-header { font-size: 2.2rem;}
     .active-section { font-size: 1.7rem; }
     .link-list a { 
@@ -42,15 +44,18 @@
 
 @media only screen and (min-width: 380px) {
     html { font-size: 10px; }
+    .projects { font-size: 8px}
     .wordart-header { font-size: 1.5rem; }
     .active-section {  font-size: 1rem; }
 }
 
 @media only screen and (min-width: 400px) {
+    .projects { font-size: 10px}
     html { font-size: 10px; }
 }
 
 @media only screen and (min-width: 600px) { 
+    .projects { font-size: 12px}
     html { font-size: 14px; }
 }
 
@@ -67,6 +72,7 @@
         font-size: 1rem; 
         margin-bottom: 0px;
     }
+    .projects { font-size:14px}
     #mini-navbar-root { display: none; }
     #mini-navbar-command { display: none; }
     #full-navbar-root { display: inline; }
