@@ -76,7 +76,7 @@ const projects = [
     },
     {
         repoLink: "https://github.com/itsvenox/AMONG-FIGHTER",
-        discordImageLink: "https://github.com/itsvenox/AMONG-FIGHTER/blob/main/screenshots/splash_screen.png"
+        discordImageLink: "https://media.discordapp.net/attachments/990639796646977556/1185863086373097483/game_screen.png"
     },
 ];
 
