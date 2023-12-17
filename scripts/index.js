@@ -74,7 +74,12 @@ const projects = [
         repoLink: "https://github.com/itsvenox/GevoxAPI",
         discordImageLink: "https://cdn.discordapp.com/attachments/990639796646977556/1150092458940698624/GevoxApi_v1.0.png"
     },
+    {
+        repoLink: "https://github.com/itsvenox/AMONG-FIGHTER",
+        discordImageLink: "https://github.com/itsvenox/AMONG-FIGHTER/blob/main/screenshots/splash_screen.png"
+    },
 ];
+
 
 function extractRepoName(repoLink) {
     const parts = repoLink.split("/");
