@@ -78,6 +78,10 @@ const projects = [
         repoLink: "https://github.com/itsvenox/AMONG-FIGHTER",
         discordImageLink: "https://raw.githubusercontent.com/itsvenox/AMONG-FIGHTER/refs/heads/main/screenshots/splash_screen.png"
     },
+    {
+        repoLink: "https://github.com/itsvenox/AMONG-FIGHTER",
+        discordImageLink: "https://raw.githubusercontent.com/itsvenox/alhendawi/refs/heads/main/alhendawi.png"
+    },
 ];
 
 
