@@ -72,11 +72,11 @@ window.addEventListener('load', () => {
 const projects = [
     {
         repoLink: "https://github.com/itsvenox/GevoxAPI",
-        discordImageLink: "https://cdn.discordapp.com/attachments/990639796646977556/1150092458940698624/GevoxApi_v1.0.png"
+        discordImageLink: "https://raw.githubusercontent.com/itsvenox/GevoxAPI/refs/heads/main/image.png"
     },
     {
         repoLink: "https://github.com/itsvenox/AMONG-FIGHTER",
-        discordImageLink: "https://media.discordapp.net/attachments/990639796646977556/1185863086373097483/game_screen.png?ex=65912810&is=657eb310&hm=75bff5ea3cda401b49f0cc06a38eb6e2ee8783892936c59c4e34ca3ac0b1034a&=&format=webp&quality=lossless&width=881&height=616"
+        discordImageLink: "https://raw.githubusercontent.com/itsvenox/AMONG-FIGHTER/refs/heads/main/screenshots/splash_screen.png"
     },
 ];
 
